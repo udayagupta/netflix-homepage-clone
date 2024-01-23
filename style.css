@@ -1,0 +1,274 @@
+:root {
+    --clr-button-red: rgb(229, 9, 20);
+    --faq-bg: rgb(45 45 45);
+}
+
+
+.logo {
+    filter: invert(12%) sepia(94%) saturate(7483%) hue-rotate(1deg) brightness(98%) contrast(108%);
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* font-family: var(--ff); */
+    font-weight: 500;
+    background-color: black;
+    color: white;
+}
+
+main {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%), url(images/Netflix-BG-Image.jpg);
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    align-items: center;
+    padding-block: 2rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 85vw;
+    padding: 1.5rem;
+    flex-wrap: wrap;
+    row-gap: 0.5rem ;
+}
+
+
+.logo img {
+    max-height: 50px;
+    max-width: 120px !important;
+}
+
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    
+}
+
+button {
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.buttons > button {
+    max-height: 30px;
+
+    
+}
+
+.language {
+    width: 120px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    border: 0.5px solid grey;
+    background: transparent;
+    border-radius: 4px;
+}
+
+.sign-in {
+    background-color: var(--clr-button-red);
+    color: white;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 80px;
+    
+}
+
+.transition {
+    transition: 0.5s ease;
+}
+
+.hover:hover{
+    background-color: rgb(178, 14, 22);
+}
+
+/* Landing Part CSS */
+.landing-part { 
+    text-align: center;
+    color: white;
+    margin-block: auto;
+}
+
+.landing-part > * {
+    width: 100%;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+.email {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+
+form {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+form > button {
+    background-color: var(--clr-button-red);
+    border-radius: 4px;
+    min-width: 155px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    min-height: 56px;
+    
+}
+
+form > input {
+    min-height: 56px;
+    width: 50%;
+    background: rgba(0, 0, 0, 0.437);
+    border: 0.5px solid white;
+    border-radius: 4px;
+    color: white !important; 
+    padding-left: 0.8rem;
+}
+
+@media (max-width: 566px) {
+    form {
+        flex-direction: column;
+        
+    }
+
+    form > input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 420px) {
+    header {
+     justify-content: center;
+    }
+  
+ }
+
+@media (max-width: 960px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    h3 {
+        font-size: .9rem;
+    }
+}
+
+/* Second Part CSS */
+.idle-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    position: relative;
+    gap: 1rem;
+    flex-wrap: wrap;
+    min-height: 90vh;
+}
+
+.content {
+    padding-top:1rem ;
+    text-align: center;
+    max-width: 500px;
+    margin-block: auto;
+}
+
+.content > h2 {
+    font-size: 3rem;
+}
+
+.content > p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+video {
+    position: absolute;
+    z-index: -1;
+}
+
+.image {
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+}
+
+.second, .fourth {
+    flex-direction: row-reverse;
+}
+
+/* FAQ CSS */
+.faq {
+    /* margin: 1rem; */
+    text-align: center;
+    padding-block: 3rem;
+    padding-inline: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.faq-ques {
+    background-color: var(--faq-bg);
+    color: white;
+    width: 75vw;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.faq-ques:hover {
+    background-color: rgb(85, 84, 84);
+}
+
+#button {
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 84px;
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+.faq-ques-content {
+    font-size: 1.5rem;
+    padding: 1rem;
+    font-weight: normal;
+    text-align: left;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+#faq-content {
+    display: none;
+
+}
+
