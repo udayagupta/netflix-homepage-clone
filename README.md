@@ -1,4 +1,4 @@
-# Frontend Mentor - Results summary component solution
+# Netflix Homepage Clone Project
 
 
 ## Table of contents
